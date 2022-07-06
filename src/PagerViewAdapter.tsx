@@ -43,6 +43,8 @@ export default function PagerViewAdapter<T extends Route>({
   style,
   ...rest
 }: Props<T>) {
+  console.log('PagerViewAdapter');
+
   const { index } = navigationState;
 
   const listenersRef = React.useRef<Listener[]>([]);
