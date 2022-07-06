@@ -267,6 +267,8 @@ export default function PanResponderAdapter<T extends Route>({
     onPanResponderTerminationRequest: () => true,
   });
 
+  console.log(panResponder);
+
   const maxTranslate = layout.width * (routes.length - 1);
   const translateX = Animated.multiply(
     panX.interpolate({
@@ -295,7 +297,7 @@ export default function PanResponderAdapter<T extends Route>({
             : null,
           style,
         ]}
-        {...panResponder.panHandlers}
+        // {...panResponder.panHandlers}
       >
         {React.Children.map(children, (child, i) => {
           const route = routes[i];
